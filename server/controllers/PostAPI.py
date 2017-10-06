@@ -9,8 +9,6 @@ import server.source.db.interface.Database as Database
 		
 class UpdateUserData(views.View) :
 	
-	def post(self, request) :
-		latitude = request.GET.get('latitude')
-		longitude = request.GET.get('longitude')
-		
-		return JsonResponse(json_response)
+	def get(self, request) :
+		Database.updateData(request.GET)
+		return JsonResponse({'status' : 'ok'})

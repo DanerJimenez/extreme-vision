@@ -16,3 +16,9 @@ class User(models.Model) :
 			'accel' : self.accel.toJson(),
 			'gyro' : self.gyro.toJson()
 		}
+		
+	def saveAll(self) :
+		self.gps.save()
+		self.accel.save()
+		self.gyro.save()
+		self.save()

@@ -12,3 +12,20 @@ def getUserData(username) :
 		return {'status' : 1}
 	else :
 		return user[0].toJson()
+		
+def updateData(request) :
+	username = request.get('username')
+	user = User.objects.filter(username=username)[0]	
+	if user is not None :
+		updateFieldsOf(user, request)
+		
+def updateFieldsOf(user, request) :
+	latitude = request.get('latitude')
+	if latitude is not None :
+		user.gps.y = latitude
+	
+	longitude = request.get('longitude')
+	if longitude is not None :
+		user.gps.x = longitude
+	
+	user.saveAll()
