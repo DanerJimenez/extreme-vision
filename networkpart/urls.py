@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
 	url(r'^db/', include('server.server_urls')),
+	url(r'^admin/', admin.site.urls),
 ]
