@@ -1,4 +1,7 @@
 
+from server.models.UserModel import User
+from server.models.GpsModel import Gps
+
 def getUsernames() :
 	username_db = {
 		"usernames" : 
@@ -19,8 +22,8 @@ def getUserData(username) :
 			'status' : 0,
 			
 			'gps' : {
-				'x' : 1.0,
-				'y' : 2.0
+				'x' : 121.0541,
+				'y' : 14.6578
 			},
 			
 			'gyro' : {
