@@ -11,8 +11,8 @@ class GetUsernames(views.View) :
 	def get(self, request) :
 		json_response = {
 			"usernames" : [
-				"testuser1",
-				"testuser2"
+				"alfred",
+				"adi"
 			]
 		}
 
@@ -24,7 +24,7 @@ class GetUserData(views.View) :
 	def get(self, request) :
 		username = request.GET.get('username')
 		
-		if username == 'testuser1' :
+		if username == 'alfred' :
 			json_response = {
 				'status' : 0,
 				
@@ -48,7 +48,7 @@ class GetUserData(views.View) :
 			
 			return JsonResponse(json_response)
 			
-		elif username == 'testuser2' :	
+		elif username == 'adi' :	
 			json_response = {
 				'status' : 0,
 				
