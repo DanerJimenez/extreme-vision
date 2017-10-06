@@ -4,4 +4,5 @@ import server.controllers.GetAPI as GetAPI
 
 urlpatterns = [
     url(r'^req/names/$', GetAPI.GetUsernames.as_view()),
+	url(r'^req/data/$', GetAPI.GetUserData.as_view()),
 ]
